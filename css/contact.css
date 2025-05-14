@@ -1,0 +1,344 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #1b1a19, #141413); /* Black gradient background */
+    color: white; /* Text color for contrast */
+    padding-top: 60px; /* Add padding equal to the navbar height */
+}
+.main-container {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent overlay */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+/* Section Containers */
+
+section {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 70%;
+    background: linear-gradient(135deg, #232323, #363636); /* Semi-transparent overlay */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgb(0, 0, 0); 
+    border: 2px solid #ffffff; /* 2px wide, solid style */
+    position: relative; /* Ensure the section stays in place */
+    text-align: center; /* Center text inside the section */
+    top: 50px
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+/* Ensure text and content are above the overlay */
+section > * {
+    position: relative;
+    z-index: 2;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #202020, #131313); /* Gradient background */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    align-items: center; /* Vertically center the text */
+    z-index: 3;
+    border: 2px solid #c0c0ff52; /* 2px wide, solid style, pink color */
+    border-radius: 1px; /* Match the section's border-radius + border thickness */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #b7b7b7; /* Change text color on hover */
+}
+
+
+h1 {
+    display: block;
+    font-size: 8.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+
+    /* Gradient Text */
+    background: linear-gradient(90deg, #ffffff, #99ff80); /* Gradient colors */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+    text-fill-color: transparent; /* For non-webkit browsers (optional) */
+
+    border-bottom: 2px solid #fff3b45a; /* Add a line between sections */
+    padding-bottom: 29px; /* Add spacing below the content */
+
+    border-radius: 10%;
+
+    /* Text Shadow */
+    text-shadow: 2px 2px 8px rgba(218, 218, 218, 0.329);
+   
+}
+h2 {
+    display: block;
+    font-size: 2.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-decoration: overline;
+    text-decoration: underline;
+
+}
+
+h2 a {
+    text-decoration: none; /* Remove underline */
+    font-size: 2.5em; /* Adjust font size */
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffffff, #cacaca);
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+    text-fill-color: transparent; /* For non-webkit browsers */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    text-shadow: 2px 2px 8px rgba(218, 218, 218, 0.329); /* Subtle shadow for section headings */
+
+}
+
+h2 a:hover {
+    background: linear-gradient(90deg, #dcffe7, #c4ffc7); /* New gradient on hover */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.115); /* Glow effect on hover */
+}
+
+p {
+     display: block;
+    font-size: 2.0em;
+    margin-block-start: 0em;
+    margin-block-end: 3em;
+    margin-inline-start: 0px;
+    margin-inline-end: 3px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 4.5em;
+    margin: 0;
+}
+
+form {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(46, 46, 46, 0.885);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid #c3ffbd;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #c3ffbd;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+button {
+    background: #6bf7a1;
+    color: rgba(0, 0, 0, 0.911);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background: #5fffdf;
+}
+
+/* Error Styles */
+input:invalid, textarea:invalid, select:invalid {
+    border-color: rgb(224, 255, 189);
+}
+
+
+ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+ul li {
+    position: relative; /* Position for custom bullet */
+    padding-left: 30px; /* Add space for the custom bullet */
+    margin-bottom: 15px; /* Add spacing between list items */
+    font-size: 1.5em; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    color: #ffffff; /* Text color */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+ul li::before {
+    content: '•'; /* Custom bullet symbol */
+    position: absolute; /* Position the bullet */
+    left: 0; /* Align bullet to the left */
+    top: 50%; /* Center bullet vertically */
+    transform: translateY(-50%); /* Adjust for vertical alignment */
+    font-size: 1.5em; /* Adjust bullet size */
+    color: #99ff8b; /* Bullet color */
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+ul li:hover {
+    color: #92ffaa; /* Change text color on hover */
+}
+
+ul li:hover::before {
+    color: #ffffff; /* Change bullet color on hover */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Add padding for smaller screens */
+    }
+
+    .main-container {
+        width: 100%; /* Use full width for smaller screens */
+        padding: 15px; /* Adjust padding */
+    }
+
+    section {
+        padding: 20px 10px; /* Reduce section padding */
+        margin: 10px auto; /* Adjust section margins */
+    }
+
+    h1 {
+        font-size: 3em; /* Shrink main heading */
+        margin-block-start: 0.2em; /* Reduce spacing above the heading */
+        margin-block-end: 0.2em; /* Reduce spacing below the heading */
+    }
+    
+
+    h2 {
+        font-size: 2em; /* Shrink subheadings */
+        margin-block-start: 0.5em; /* Adjust spacing above the subheading */
+        margin-block-end: 0.5em; /* Adjust spacing below the subheading */
+    }
+
+    p {
+        font-size: 1em; /* Reduce paragraph font size */
+        line-height: 1.4; /* Adjust line height for readability */
+        margin-block-end: 1em; /* Adjust spacing below paragraphs */
+    }
+
+    .navbar {
+        padding: 2px 2px; /* Adjust navbar padding */
+    }
+
+    .navbar a {
+        font-size: 1em; /* Shrink navbar link font size */
+    }
+
+    ul li {
+        font-size: 1.2em; /* Shrink list item font size */
+        padding-left: 20px; /* Adjust padding for bullets */
+        margin-bottom: 10px; /* Reduce spacing between list items */
+    }
+
+    ul li::before {
+        font-size: 1.2em; /* Shrink bullet size */
+    }
+
+    form {
+        max-width: 100%; /* Make the form fit the screen */
+        padding: 15px; /* Adjust padding inside the form */
+    }
+
+    input, textarea, select {
+        font-size: 0.9em; /* Reduce input font size */
+        padding: 8px; /* Adjust padding inside inputs */
+    }
+
+    button {
+        font-size: 0.9em; /* Shrink button font size */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+
+    legend {
+        font-size: 1.2em; /* Shrink legend font size */
+    }
+
+    label {
+        font-size: 1em; /* Shrink label font size */
+    }
+}

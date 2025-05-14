@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="/css/contact.css"> <!-- Link to your CSS file -->
+    <script defer src="/js/contact.js"></script> <!-- Link to your JavaScript file -->
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/project.html">Project</a></li>
+            <li><a href="/pages/resume.html">Resume</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Contact Me</h1>
+        <p>Feel free to reach out using the form below. I look forward to hearing from you!</p>
+    </header>
+
+    <main>
+        <form id="contact-form">
+            <!-- User Information -->
+            <fieldset>
+                <legend>Basic Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company" placeholder="Your Company">
+            </fieldset>
+
+            <!-- Employer Questions -->
+            <fieldset>
+                <legend>Questions</legend>
+                <label for="qualities">What qualities did you see in me?</label>
+                <textarea id="qualities" name="qualities" rows="4" placeholder="Describe the qualities..." required></textarea>
+
+                <label for="hear-about">How did you hear about me?</label>
+                <select id="hear-about" name="hear-about" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="linkedin">LinkedIn</option>
+                    <option value="github">GitHub</option>
+                    <option value="referral">Referral</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
+
+            <!-- Additional Inputs -->
+            <fieldset>
+                <legend>Additional Information</legend>
+                <label for="availability">When would you like to schedule a meeting?</label>
+                <input type="date" id="availability" name="availability" required>
+
+                <p>Preferred Contact Method:</p>
+                <label><input type="radio" name="contact-method" value="email" required> Email</label>
+                <label><input type="radio" name="contact-method" value="phone"> Phone</label>
+
+                <p>What are you interested in?</p>
+                <label><input type="checkbox" name="interest" value="collaboration"> Part time Collaboration</label>
+                <label><input type="checkbox" name="interest" value="job-offer"> Commission</label>
+                <label><input type="checkbox" name="interest" value="job-offer"> Hiring</label>
+                
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

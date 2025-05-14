@@ -1,0 +1,386 @@
+/* General Styles */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure the background spans the full width */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: white; /* Text color for contrast */
+    background: linear-gradient(rgba(0, 0, 0, 0.022), rgba(0, 0, 0, 0.055)), /* Color overlay */
+                url('/images/background.png'); /* Path to your background image */
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fix the background in place */
+
+}
+
+.main-container {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent overlay */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+/* Section Containers */
+
+section {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 80%;
+    max-height: 50%;
+    background: linear-gradient(135deg, #262626, #212121); /* Semi-transparent overlay */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgb(0, 0, 0); 
+    border: 2px solid #fff3b4; /* 2px wide, solid style */
+    position: relative; /* Ensure the section stays in place */
+    text-align: center; /* Center text inside the section */
+    top: 20px
+}
+section > * {
+    border-bottom: 2px solid #fff3b45a; /* Add a line between sections */
+    padding-bottom: 40px; /* Add spacing below the content */
+    margin-bottom: 30px; /* Add spacing between sections */
+    border-radius: 10%;
+}
+
+section > *:last-child {
+    border-bottom: none; /* Remove the line for the last section */
+}
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+/* Ensure text and content are above the overlay */
+section > * {
+    position: relative;
+    z-index: 2;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #202020, #131313); /* Gradient background */
+    color: rgb(255, 247, 232);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    align-items: center; /* Vertically center the text */
+    z-index: 3;
+    border: 2px solid #c0c0ff52; /* 2px wide, solid style, pink color */
+    border-radius: 1px; /* Match the section's border-radius + border thickness */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #beb8b2; /* Change text color on hover */
+}
+
+
+h1 {
+    display: block;
+    font-size: 6.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+
+    /* Gradient Text */
+    background: linear-gradient(90deg, #ffffff, #ffe894); /* Gradient colors */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+    text-fill-color: transparent; /* For non-webkit browsers (optional) */
+
+    /* Add underline */
+    text-decoration: underline;
+    text-decoration-color: #fdfcfc; /* Optional: Set underline color */
+    text-decoration-thickness: 7px; /* Optional: Adjust underline thickness */
+
+    /* Text Shadow */
+    text-shadow: 2px 2px 8px rgba(218, 218, 218, 0.329);
+   
+}
+h2 {
+    display: block;
+    font-size: 2.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-decoration: overline;
+    text-decoration: underline;
+
+}
+
+h2 a {
+    text-decoration: none; /* Remove underline */
+    font-size: 2.5em; /* Adjust font size */
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffffff, #cacaca);
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+    text-fill-color: transparent; /* For non-webkit browsers */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    text-shadow: 2px 2px 8px rgba(218, 218, 218, 0.329); /* Subtle shadow for section headings */
+
+}
+
+h2 a:hover {
+    background: linear-gradient(90deg, #0874f8, #6f97fc); /* New gradient on hover */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.115); /* Glow effect on hover */
+}
+
+p {
+     display: block;
+    font-size: 3.0em;
+    margin-block-start: 0em;
+    margin-block-end: 3em;
+    margin-inline-start: 0px;
+    margin-inline-end: 3px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+}
+.button-link {
+    display: inline-block; /* Make the link behave like a button */
+    padding: 10px 20px; /* Add padding for the button */
+    font-size: 1.2em; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    color: white; /* Button text color */
+    background: linear-gradient(90deg, #fdb869, #ffae00); /* Gradient background */
+    border: 2px solid #ffffff; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center the text */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+.button-link:hover {
+    background: linear-gradient(90deg, #ce7c00, #913c00); /* Reverse gradient on hover */
+    color: #fffadf; /* Change text color on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.timeline table {
+    width: 100%; /* Keep the table spanning the full width */
+    border-collapse: collapse; /* Remove gaps between table cells */
+    margin-top: 30px; /* Add spacing above the table */
+    background: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure rounded corners apply to the table */
+    font-size: 1.5em; /* Increase the font size for the entire table */
+}
+
+.timeline th, .timeline td {
+    padding: 30px; /* Increase padding inside cells for more spacing */
+    text-align: left; /* Align text to the left */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2); /* Add a subtle border between rows */
+    color: white; /* Text color */
+}
+
+.timeline th {
+    background: linear-gradient(90deg, #ffae00, #ffa806); /* Gradient background for headers */
+    color: white; /* Header text color */
+    font-weight: bold; /* Make header text bold */
+    text-align: center; /* Center-align header text */
+    font-size: 1.8em; /* Make the header font size larger */
+}
+
+.timeline td {
+    background: rgba(0, 0, 0, 0); /* Slightly different background for rows */
+    text-align: center; /* Center-align table data */
+}
+
+.timeline tr:last-child td {
+    border-bottom: none; /* Remove border for the last row */
+}
+
+.timeline tr:hover td {
+    background: rgba(255, 255, 255, 0.1); /* Highlight row on hover */
+    transition: background 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+
+.project-card img {
+    width: 800px; /* Set a fixed width for all images */
+    object-fit: cover; /* Ensure the image fits within the dimensions without distortion */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    border: #fdb869 3px solid; /* 2px wide, solid style */
+}
+
+.project-card img:hover {
+    transform: scale(1.02); /* Slightly increase the size on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.115); /* Glow effect on hover */
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: #fdb869; /* Link color */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    font-weight: bold; /* Make the text bold */
+    font-size: 1.2em; /* Adjust font size */
+    text-shadow: 2px 2px 6px rgba(255, 183, 0, 0.5); /* Subtle shadow for readability */
+}
+
+a:hover {
+    color: #ffd000; /* Change link color on hover */
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.115); /* Glow effect on hover */
+    text-decoration: underline; /* Add underline on hover */
+    text-decoration-color: #ffcc00;
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+ul li {
+    position: relative; /* Position for custom bullet */
+    padding-left: 30px; /* Add space for the custom bullet */
+    margin-bottom: 15px; /* Add spacing between list items */
+    font-size: 1.5em; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    color: #ffffff; /* Text color */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+ul li::before {
+    content: '•'; /* Custom bullet symbol */
+    position: absolute; /* Position the bullet */
+    left: 0; /* Align bullet to the left */
+    top: 50%; /* Center bullet vertically */
+    transform: translateY(-50%); /* Adjust for vertical alignment */
+    font-size: 1.5em; /* Adjust bullet size */
+    color: #ffeb88; /* Bullet color */
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+ul li:hover {
+    color: #fff892; /* Change text color on hover */
+}
+
+ul li:hover::before {
+    color: #ffffff; /* Change bullet color on hover */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Add padding for smaller screens */
+    }
+
+    .main-container {
+        width: 100%; /* Use full width for smaller screens */
+        padding: 15px; /* Adjust padding */
+    }
+
+    section {
+        padding: 20px 10px; /* Reduce section padding */
+        margin: 10px auto; /* Adjust section margins */
+    }
+
+    h1 {
+        font-size: 3em; /* Shrink main heading */
+        margin-block-start: 0.5em; /* Adjust spacing above the heading */
+        margin-block-end: 0.5em; /* Adjust spacing below the heading */
+    }
+
+    h2 {
+        font-size: 2em; /* Shrink subheadings */
+        margin-block-start: 0.5em; /* Adjust spacing above the subheading */
+        margin-block-end: 0.5em; /* Adjust spacing below the subheading */
+    }
+
+    p {
+        font-size: 1em; /* Reduce paragraph font size */
+        line-height: 1.4; /* Adjust line height for readability */
+        margin-block-end: 1em; /* Adjust spacing below paragraphs */
+    }
+
+    .navbar {
+        padding: 8px 10px; /* Adjust navbar padding */
+    }
+
+    .navbar a {
+        font-size: 1em; /* Shrink navbar link font size */
+    }
+
+    ul li {
+        font-size: 1.2em; /* Shrink list item font size */
+        padding-left: 20px; /* Adjust padding for bullets */
+        margin-bottom: 10px; /* Reduce spacing between list items */
+    }
+
+    ul li::before {
+        font-size: 1.2em; /* Shrink bullet size */
+    }
+
+    .project-card img {
+        width: 100%; /* Make images responsive */
+        max-width: 300px; /* Shrink images for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .button-link {
+        font-size: 1em; /* Shrink button font size */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+
+    .timeline table {
+        font-size: 1em; /* Shrink table font size */
+    }
+
+    .timeline th, .timeline td {
+        padding: 15px; /* Reduce padding inside table cells */
+    }
+
+    .timeline th {
+        font-size: 1.2em; /* Shrink header font size */
+    }
+
+    .timeline td {
+        font-size: 1em; /* Shrink table data font size */
+    }
+}

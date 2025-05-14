@@ -1,0 +1,339 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #040004, #141413); /* Black gradient background */
+    color: white; /* Text color for contrast */
+}
+.main-container {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent overlay */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+/* Section Containers */
+
+section {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 70%;
+    background: linear-gradient(135deg, #0a0a0a, #151515); /* Semi-transparent overlay */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgb(0, 0, 0); 
+    border: 2px solid #e18af3; /* 2px wide, solid style */
+    position: relative; /* Ensure the section stays in place */
+    text-align: center; /* Center text inside the section */
+    top: 50px
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+/* Ensure text and content are above the overlay */
+section > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+#ranking {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#ranking h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#rankings-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the rankings */
+    gap: 20px; /* Add spacing between items */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+.rank {
+    text-align: center;
+}
+
+.rank img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Ensure the image fits within the dimensions */
+}
+
+.rank span {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+h1 {
+    display: block;
+    font-size: 6.5em;
+    margin-block-start: 1em; /* Add spacing from the navbar */
+    margin-block-end: 0.5em; /* Adjust spacing below the h1 */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+
+    /* Gradient Text */
+    background: linear-gradient(90deg, #ffffff, #e167ff); /* Gradient colors */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+    text-fill-color: transparent; /* For non-webkit browsers (optional) */
+
+    /* Add underline */
+    border-bottom: 2px solid #c268f65a; /* Add a line between sections */
+    padding-bottom: 29px; /* Add spacing below the content */
+
+    border-radius: 10%;
+
+    /* Text Shadow */
+    text-shadow: 2px 2px 8px rgba(218, 218, 218, 0.329);
+    text-align: center; /* Center the h1 text */
+}
+
+h2 {
+    display: block;
+    font-size: 3.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    text-decoration: overline;
+    text-decoration: underline;
+    
+
+    text-shadow: #ffffff;
+
+    border-bottom: 2px solid #c268f65a; /* Add a line between sections */
+    padding-bottom: 29px; /* Add spacing below the content */
+
+    border-radius: 10%;
+
+}
+
+h2 a {
+    text-decoration: none; /* Remove underline */
+    font-size: 2.5em; /* Adjust font size */
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffffff, #cacaca);
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+    text-fill-color: transparent; /* For non-webkit browsers */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    text-shadow: 2px 2px 8px rgba(255, 117, 218, 0.329); /* Subtle shadow for section headings */
+
+
+}
+
+
+p {
+    display: block;
+    font-size: 2.2em; /* Reduce font size */
+    margin-block-start: 0.5em; /* Adjust spacing above the paragraph */
+    margin-block-end: 1em; /* Adjust spacing below the paragraph */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: normal; /* Make the text weight normal */
+    line-height: 1.6; /* Adjust line height for readability */
+    color: #ddd; /* Softer text color */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+    font-weight: bold;
+    unicode-bidi: isolate;
+    
+}
+
+
+.rating label {
+    display: inline-block; /* Ensure labels are inline */
+    margin-right: 30px; /* Add spacing between labels */
+    padding: 10px 25px; /* Add padding inside the labels */
+    font-size: 1.2em; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    color: white; /* Text color */
+    background: rgba(0, 0, 0, 0.212); /* Semi-transparent background */
+    border: 2px solid #ffffff; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.rating label:hover {
+    background: #48013f; /* Change background color on hover */
+    color: rgb(255, 255, 255); /* Change text color on hover */
+    border-color: #ffffff; /* Change border color on hover */
+}
+
+.rating input[type="radio"] {
+    display: none; /* Hide the radio buttons */
+}
+
+.rating input[type="radio"]:checked + label {
+    background: hsl(0, 0%, 100%); /* Highlight the selected label */
+    color: white; /* Keep text color white */
+    border-color: #ffffff; /* Change border color for selected label */
+}
+
+
+
+button {
+    background: linear-gradient(90deg, #bc0adf, #9802c1); /* Gradient background */
+    color: white; /* Button text color */
+    padding: 16px 50px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Adjust font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.471); /* Subtle shadow */
+    margin: 10px auto; /* Center the button */
+    display: block; /* Ensure the button is block-level */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: linear-gradient(90deg, #770463, #6a0071); /* Softer gradient on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.618); /* Stronger shadow */
+}
+
+
+section form button {
+    background: linear-gradient(90deg, #ce4be6, #c269db); /* Gradient background */
+    color: white; /* Button text color */
+    padding: 16px 50px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Adjust font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.471); /* Subtle shadow */
+    margin: 10px auto; /* Center the button */
+    display: block; /* Ensure the button is block-level */
+    border: 2px solid #ffffff; /* 2px wide, solid style, pink color */
+    border-radius: 1px; /* Match the section's border-radius + border thickness */
+}
+
+/* Button Hover Effect */
+section form button:hover {
+    background: linear-gradient(90deg, #5e0579, #250e27); /* Softer gradient on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.618); /* Stronger shadow */
+    border: 2px solid #c0c0ff52; /* 2px wide, solid style, pink color */
+    border-radius: 1px; /* Match the section's border-radius + border thickness */
+}
+
+
+
+footer {
+    position: fixed; /* Fix the footer at the bottom of the screen */
+    bottom: 0; /* Align it to the bottom */
+    left: 0;
+    width: 100%; /* Make the footer span the full width */
+    background: rgba(29, 22, 28, 0.204); /* Semi-transparent background */
+    text-align: center; /* Center the content inside the footer */
+    padding: 10px 0; /* Add padding for spacing */
+    z-index: 1000; /* Ensure it stays above other elements */
+    
+    
+}
+
+
+.rank img {
+    width: 400px; /* Adjust the width of the images */
+    height: 400px; /* Adjust the height of the images */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    object-fit: cover; /* Ensure the image fits within the dimensions without distortion */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.rank img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em; /* Shrink header text */
+    }
+
+    .song {
+        padding: 15px;
+    }
+
+    .song img {
+        max-width: 200px; /* Shrink song images for smaller screens */
+    }
+
+    .rating label {
+        font-size: 0.9em; /* Reduce label size */
+        padding: 5px 10px; /* Adjust padding */
+    }
+
+    #ranking h2 {
+        font-size: 1.5em; /* Shrink ranking header */
+    }
+
+    #rankings-container {
+        gap: 10px; /* Reduce spacing between rankings */
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    }
+
+    .rank {
+        max-width: 120px; /* Shrink ranking container */
+        text-align: center;
+    }
+
+    .rank img {
+        width: 100%; /* Make the image responsive */
+        max-width: 120px; /* Shrink ranking images */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    }
+
+    .rank span {
+        font-size: 0.9em; /* Shrink ranking numbers */
+        margin-bottom: 5px;
+    }
+
+    footer button {
+        font-size: 0.9em; /* Reduce button size */
+        padding: 8px 15px;
+    }
+    
+    p {
+        font-size: 1em; /* Reduce font size for paragraphs */
+        line-height: 1.4; /* Adjust line height for readability */
+        margin-block-start: 0.5em; /* Adjust spacing above the paragraph */
+        margin-block-end: 0.5em; /* Adjust spacing below the paragraph */
+    }
+}
